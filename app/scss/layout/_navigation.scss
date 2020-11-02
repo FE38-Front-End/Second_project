@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+    &__item {
+        padding: 10px;
+        @include p (600, 16px, 28px, white);
+        &:hover {
+            text-decoration-line: underline;
+            text-decoration-color: #2091F9;
+        }
+        &:not(:last-child) {
+        margin-right: 21px;
+        }
+    }
+    @include screen-max ($xl) {
+        display: none;
+    }
+
+}
+

@@ -1,0 +1,27 @@
+.bread-crumbs-section {
+    padding: 15px 0 ;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.pl-banner-section {
+    background-image: url(../images/banner2.png);
+    padding: 75px 0;
+    &-textblock {
+        padding-top: 0;
+        &__overtitle {
+            margin: 0;
+        }
+        &__title {
+            margin: 0;
+        }
+        &__subtitle {
+            margin: 0;
+        }
+    }
+}
+
+.catalog-section {
+    padding: 30px 28px 30px 30px;
+    background-color: #f9f9f9;
+    display: flex;
+}

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" href="img\Logo (1).png">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<body>
+    <header class="header white-header">
+        <div class="logo white-header__logo">
+            <a href="products-list.html">
+                <img src="./images/logo-black.svg" alt="logo">	
+            </a>
+        </div>
+        <nav class="nav white-header__nav">
+            <a href="#Home" class="nav__item nav__item--active">Home</a>
+            <a href="#Shop" class="nav__item">Shop</a>
+            <a href="#Account" class="nav__item">Account</a>
+            <a href="#Pages" class="nav__item">Pages</a>
+            <a href="#Blog" class="nav__item">Blog</a>
+        </nav>
+        <div class="user">
+            <a class="user__account" href="somelink">
+                <svg class="user__account-icon user__account-icon--black" width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="background" x="0.5" width="56" height="56" rx="28" fill="#E8E8E8" fill-opacity="0.4"/>
+                    <g clip-path="url(#clip0)">
+                    <path d="M34.5 22C34.5 27 31.5 31 28.5 31C25.5 31 22.5 27 22.5 22C22.5 17 24.5 14 28.5 14C32.5 14 34.5 17 34.5 22ZM16.5 41H40.5C40.5 32 34.5 31 28.5 31C22.5 31 16.5 32 16.5 41Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <rect x="1" y="0.5" width="55" height="55" rx="27.5" stroke="white" stroke-opacity="0.5"/>
+                </svg>
+                <p class="user__account-link user__account-link--black">My Account</p>
+            </a>
+            <a class="user__favourities" href="somelink">
+                <svg class="user__favourities-icon user__favourities-icon--black" width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.9498 2C21.6779 1.99939 22.3987 2.14413 23.0701 2.42575C23.7416 2.70736 24.35 3.12018 24.8598 3.64C25.9102 4.70638 26.499 6.14316 26.499 7.64C26.499 9.13685 25.9102 10.5736 24.8598 11.64L14.4998 22.13L4.13978 11.64C3.08936 10.5736 2.50056 9.13685 2.50056 7.64C2.50056 6.14316 3.08936 4.70638 4.13978 3.64C4.64987 3.12055 5.25835 2.70795 5.92969 2.42629C6.60102 2.14464 7.32175 1.99957 8.04978 1.99957C8.7778 1.99957 9.49853 2.14464 10.1699 2.42629C10.8412 2.70795 11.4497 3.12055 11.9598 3.64L14.4998 6.24L17.0298 3.66C17.538 3.13399 18.1471 2.71586 18.8207 2.43064C19.4942 2.14542 20.2183 1.99895 20.9498 2ZM20.9498 2.68285e-06C19.9554 -0.000840038 18.9709 0.196858 18.0539 0.581505C17.1369 0.966151 16.306 1.53 15.6098 2.24L14.4998 3.36L13.3898 2.24C12.6927 1.53129 11.8616 0.968412 10.9448 0.584193C10.028 0.199974 9.04384 0.00209743 8.04978 0.00209743C7.05571 0.00209743 6.07159 0.199974 5.15479 0.584193C4.23798 0.968412 3.40683 1.53129 2.70978 2.24C1.29165 3.68363 0.49707 5.62636 0.49707 7.65C0.49707 9.67364 1.29165 11.6164 2.70978 13.06L14.4998 25L26.2898 13.06C27.7079 11.6164 28.5025 9.67364 28.5025 7.65C28.5025 5.62636 27.7079 3.68363 26.2898 2.24C25.5929 1.53091 24.7618 0.967646 23.845 0.583064C22.9282 0.198482 21.944 0.000276098 20.9498 2.68285e-06Z" fill="white"/>
+                </svg>
+            </a>
+            <div class="user__basket">
+                <a class="user__basket user__basket--black" href="somelink">
+                    <svg  width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="0.5" width="55" height="55" rx="27.5" fill="#E8E8E8" fill-opacity="0.4"/>
+                        <g clip-path="url(#clip0)">
+                        <path d="M25.7607 37.35C25.7607 37.9946 25.2511 38.5 24.6436 38.5C24.036 38.5 23.5264 37.9946 23.5264 37.35C23.5264 36.7053 24.036 36.2 24.6436 36.2C25.2511 36.2 25.7607 36.7053 25.7607 37.35Z" fill="#BDBDBD" stroke="white"/>
+                        <path d="M35.5859 37.35C35.5859 37.9946 35.0763 38.5 34.4688 38.5C33.8612 38.5 33.3516 37.9946 33.3516 37.35C33.3516 36.7053 33.8612 36.2 34.4688 36.2C35.0763 36.2 35.5859 36.7053 35.5859 37.35Z" fill="#BDBDBD" stroke="white"/>
+                        <path d="M38.4475 19.7827L38.4559 19.7927C38.4783 19.8194 38.495 19.8517 38.5041 19.8874C38.5128 19.9218 38.514 19.9579 38.5076 19.9929L36.2306 30.2531L36.2305 30.2536C36.2184 30.3085 36.1884 30.3553 36.1482 30.3873C36.1083 30.4191 36.0603 30.4347 36.0124 30.4336L36.0124 30.4334H36H24.9025H24.7192L24.5794 30.5518L22.8472 32.0185L22.7775 32.0775L22.7332 32.1572C22.6511 32.305 22.6081 32.4712 22.6077 32.6398C22.6072 32.8084 22.6494 32.9748 22.7307 33.123C22.8121 33.2712 22.9302 33.3968 23.0747 33.4866C23.2192 33.5764 23.3848 33.6271 23.5554 33.6331L23.5641 33.6334H23.5728H35.6837C35.7385 33.6334 35.793 33.6555 35.8349 33.6982C35.877 33.7412 35.9025 33.8016 35.9025 33.8667C35.9025 33.9318 35.877 33.9923 35.8349 34.0353C35.793 34.078 35.7385 34.1001 35.6837 34.1001H23.6878H23.6752L23.6626 34.1007C23.4341 34.1122 23.2059 34.0691 22.996 33.9743L22.7903 34.4301L22.996 33.9743C22.7876 33.8803 22.6026 33.7377 22.456 33.557C22.2532 33.2926 22.1456 32.9632 22.1534 32.6247C22.1612 32.2901 22.2812 31.9699 22.4913 31.7172L22.5538 31.6533L23.7133 30.6868L23.9695 30.4732L23.8706 30.1546L20.5716 19.5212L20.4938 19.2705L20.2432 19.1922L17.6633 18.3856C17.6633 18.3856 17.6632 18.3856 17.6632 18.3856C17.6092 18.3686 17.5609 18.3294 17.5316 18.2731C17.5022 18.2164 17.4957 18.149 17.5145 18.0866C17.5332 18.0244 17.5744 17.9754 17.6256 17.9478C17.6509 17.9341 17.6781 17.9259 17.7058 17.9232C17.7334 17.9205 17.7613 17.9234 17.7882 17.9318C17.7882 17.9318 17.7882 17.9318 17.7882 17.9318L20.7351 18.8558L20.736 18.8561C20.7685 18.8662 20.7991 18.8845 20.8248 18.9103C20.8503 18.936 20.8702 18.9683 20.8819 19.0049C20.882 19.0052 20.8821 19.0055 20.8822 19.0059L24.1661 29.6146L24.2751 29.9667H24.6437H35.425H35.8277L35.9135 29.5733L37.8326 20.7733L37.9648 20.1667H37.344H24.1539L24.0052 19.7001H38.2834C38.3137 19.7004 38.3439 19.7076 38.372 19.7213L38.5921 19.2724L38.372 19.7213C38.4005 19.7353 38.4265 19.756 38.4477 19.7826L38.4475 19.7827Z" fill="#BDBDBD" stroke="white"/>
+                        </g>
+                        <rect x="1" y="0.5" width="55" height="55" rx="27.5" stroke="white" stroke-opacity="0.5"/>
+                        <rect x="1" y="0.5" width="55" height="55" rx="27.5" stroke="url(#paint0_linear)"/>
+                    </svg>
+                    <div class="user__basket-notification">1</div>		
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="bread-crumbs-section">
+            <div class="bread-crumbs">
+                <a class="bread-crumbs__item bread-crumbs__item--active" href=".\index.html">Home</a>
+                <img class="bread-crumbs__item" src=".\images\bread-crumbs.svg" alt="arrow">
+                <a class="bread-crumbs__item" href=".\index.html">Fashion</a>
+            </div>
+        </div>
+
+        <div class="banner-section pl-banner-section">
+            <div class="banner-section-textblock pl-banner-section-textblock">
+                <h3 class="banner-section-textblock__overtitle pl-banner-section-textblock__overtitle">SUMMER 2020</h3>
+                <h1 class="banner-section-textblock__title pl-banner-section-textblock__title">Fashion</h1>
+                <p class="banner-section-textblock__subtitle pl-banner-section-textblock__subtitle">Find The Perfect style for you</p>
+            </div>
+        </div>
+
+        <div class="catalog-section">
+
+            <div class="sidebar">
+
+                <div class="sidebar-search">
+                    <input type="text" class="sidebar-search__input" placeholder="Search for products">
+                    <img src="../images/lupa.svg" alt="" style="width: 21px; height: 21px;">
+                </div>
+
+                <div class="sidebar-section">
+
+                    <div class="sidebar__dropdown">
+                        <input class="sidebar__dropdown-input" type="checkbox">
+                        <div class="sidebar__dropdown-title"> Accessories
+                            <div class="sidebar__dropdown-img sidebar__dropdown-img--active">
+                                <img src="..\images\plus.svg" alt="plus">
+                            </div>
+                        </div>
+                        <div class="sidebar__dropdown-menu">
+                            <div class="sidebar__dropdown-menu-item">View All</div>
+                            <div class="sidebar__dropdown-menu-item">Bags</div>
+                            <div class="sidebar__dropdown-menu-item">Belts</div>
+                            <div class="sidebar__dropdown-menu-item">Cosmetics</div>
+                            <div class="sidebar__dropdown-menu-item">Hats</div>
+                            <div class="sidebar__dropdown-menu-item">Jewelry</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar__dropdown">
+                        <input class="sidebar__dropdown-input" type="checkbox">
+                            <div class="sidebar__dropdown-title">
+                                Bags
+                                <div class="sidebar__dropdown-img">
+                                    <img src="..\images\plus.svg" alt="plus">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="sidebar__dropdown">
+                        <input class="sidebar__dropdown-input" type="checkbox">
+                            <div class="sidebar__dropdown-title">
+                                Clothing
+                                <div class="sidebar__dropdown-img">
+                                    <img src="..\images\plus.svg" alt="plus">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="sidebar__dropdown">
+                        <input class="sidebar__dropdown-input" type="checkbox">
+                            <div class="sidebar__dropdown-title">
+                                Entertainement
+                                <div class="sidebar__dropdown-img">
+                                    <img src="..\images\plus.svg" alt="plus">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="sidebar__dropdown">
+                        <input class="sidebar__dropdown-input" type="checkbox">
+                            <div class="sidebar__dropdown-title">
+                                Furniture & Decor
+                                <div class="sidebar__dropdown-img">
+                                    <img src="..\images\plus.svg" alt="plus">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="sidebar__dropdown">
+                        <input class="sidebar__dropdown-input" type="checkbox">
+                            <div class="sidebar__dropdown-title">
+                                Gadgets
+                                <div class="sidebar__dropdown-img">
+                                    <img src="..\images\plus.svg" alt="plus">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="sidebar__dropdown">
+                        <input class="sidebar__dropdown-input" type="checkbox">
+                            <div class="sidebar__dropdown-title">
+                                Shoes
+                                <div class="sidebar__dropdown-img">
+                                    <img src="..\images\plus.svg" alt="plus">
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+                
+                <div class="sidebar-section">
+                    <div class="sidebar-section__title">
+                        Color
+                    </div>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Red</div>
+                        <div class="checkbox__number">103</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Blue</div>
+                        <div class="checkbox__number">23</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Brown</div>
+                        <div class="checkbox__number">12</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Orange</div>
+                        <div class="checkbox__number">22</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Yellow</div>
+                        <div class="checkbox__number">11</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Pink</div>
+                        <div class="checkbox__number">22</div>
+                    </label>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-section__title">
+                        Size
+                    </div>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Extra Large</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Large</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Medium</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Small</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon checkbox__icon--radio"></div>
+                        <div class="checkbox__text">Extra Small</div>
+                    </label>
+                    
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-section__title">
+                        Filter by price
+                    </div>
+                    <div class="price-filter">
+                        <div class="price-filter__choise"></div>
+                        <div class="price-filter__price price-filter__price--min">15</div>
+                        <div class="price-filter__price price-filter__price--max">250</div>
+                        <div class="price-filter__circle price-filter__circle--min">
+                            <div class="price-filter__circle-decor"></div>
+                        </div>
+                        <div class="price-filter__circle price-filter__circle--max">
+                            <div class="price-filter__circle-decor"></div>
+                        </div>  
+                    </div>
+                    <div class="price-filter__range">
+                        <div class="price-filter__range-item">15$</div>
+                        <div class="price-filter__range-item">250$</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-section__title">
+                        Brand
+                    </div>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon">
+                            <img src="../images/stick.svg" alt="stick">
+                        </div>
+                        <div class="checkbox__text">Adidas</div>
+                        <div class="checkbox__number">11</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon">
+                            <img src="../images/stick.svg" alt="stick">
+                        </div>
+                        <div class="checkbox__text">Calvin Klein</div>
+                        <div class="checkbox__number">23</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon">
+                            <img src="../images/stick.svg" alt="stick">
+                        </div>
+                        <div class="checkbox__text">Columbia</div>
+                        <div class="checkbox__number">12</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon">
+                            <img src="../images/stick.svg" alt="stick">
+                        </div>
+                        <div class="checkbox__text">Converse</div>
+                        <div class="checkbox__number">04</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon">
+                            <img src="../images/stick.svg" alt="stick">
+                        </div>
+                        <div class="checkbox__text">Dockers</div>
+                        <div class="checkbox__number">22</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__icon">
+                            <img src="../images/stick.svg" alt="stick">
+                        </div>
+                        <div class="checkbox__text">Armani</div>
+                        <div class="checkbox__number">103</div>
+                    </label>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="catalog">
+                <div class="catalog-menu">
+                    <p class="catalog-menu__text">Sort by:</p>
+
+                    <div class="dropdown">
+                        <input id="dropdown-input" type="checkbox">
+                                <div class="dropdown__button">
+                                    Popularity
+                                    <img src="..\images\dropdown.svg" alt="arrows">
+                                </div>
+                        <div class="dropdown__menu">
+                            <div class="dropdown__menu-item">Price</div>
+                            <div class="dropdown__menu-item">Color</div>
+                            <div class="dropdown__menu-item">Size</div>
+                            <div class="dropdown__menu-item">Brand</div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-menu__display"></div>
+                        <div class="catalog-menu__display-item catalog-menu__display-item--active">
+                            <img src=".\images\display-square.svg" alt="display-square">
+                        </div>
+                        <div class="catalog-menu__display-item">
+                            <img src="..\images\display-line.svg" alt="display-line">
+                        </div>
+                    </div>
+
+                <div class="catalog-cards">
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                    <div class="card catalog-card">
+                        <div class="full-heart">
+                            <img class="full-heart__icon" src=".\images\heart.svg" alt="like">
+                        </div>
+                        <img class="card__pic" src="..\images\card1_2.png" alt="background">
+                        <div class="card__name">Men's Essential Tee</div>
+                        <div class="card__subtitle">(Black)</div>
+                        <div class="card__price">$32.00</div>
+                    </div>
+
+                </div>
+
+                <div class="catalog-pages-menu">
+                    <div class="catalog-pages-menu__arrow">
+                        <svg class="catalog-pages-menu__arrow-left" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.25847 13.9192C8.37125 13.8067 8.46073 13.673 8.52178 13.5258C8.58283 13.3786 8.61426 13.2208 8.61426 13.0615C8.61426 12.9022 8.58283 12.7444 8.52178 12.5972C8.46073 12.45 8.37125 12.3163 8.25847 12.2038L3.53801 7.48333L8.25847 2.76288C8.48595 2.5354 8.61374 2.22687 8.61374 1.90517C8.61374 1.58346 8.48595 1.27493 8.25847 1.04745C8.03099 0.819972 7.72246 0.692178 7.40075 0.692178C7.07905 0.692178 6.77052 0.819972 6.54304 1.04745L0.958789 6.63171C0.846005 6.74426 0.756526 6.87795 0.695475 7.02513C0.634423 7.17231 0.602999 7.33008 0.602999 7.48942C0.602999 7.64876 0.634423 7.80653 0.695475 7.95371C0.756526 8.10088 0.846005 8.23458 0.958789 8.34713L6.54304 13.9314C7.00536 14.3937 7.78399 14.3937 8.25847 13.9192Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="catalog-pages-menu__number catalog-pages-menu__number--active">1</div>
+                    <div class="catalog-pages-menu__number">2</div>
+                    <div class="catalog-pages-menu__number">3</div>
+                    <div class="catalog-pages-menu__number">4</div>
+                    <div class="catalog-pages-menu__number">5</div>
+                    <div class="catalog-pages-menu__load">
+                        <div class="catalog-pages-menu__load-item"></div>
+                        <div class="catalog-pages-menu__load-item"></div>
+                        <div class="catalog-pages-menu__load-item"></div>
+                    </div>
+                    <div class="catalog-pages-menu__arrow">
+                        <svg class="catalog-pages-menu__arrow-right" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.25847 13.9192C8.37125 13.8067 8.46073 13.673 8.52178 13.5258C8.58283 13.3786 8.61426 13.2208 8.61426 13.0615C8.61426 12.9022 8.58283 12.7444 8.52178 12.5972C8.46073 12.45 8.37125 12.3163 8.25847 12.2038L3.53801 7.48333L8.25847 2.76288C8.48595 2.5354 8.61374 2.22687 8.61374 1.90517C8.61374 1.58346 8.48595 1.27493 8.25847 1.04745C8.03099 0.819972 7.72246 0.692178 7.40075 0.692178C7.07905 0.692178 6.77052 0.819972 6.54304 1.04745L0.958789 6.63171C0.846005 6.74426 0.756526 6.87795 0.695475 7.02513C0.634423 7.17231 0.602999 7.33008 0.602999 7.48942C0.602999 7.64876 0.634423 7.80653 0.695475 7.95371C0.756526 8.10088 0.846005 8.23458 0.958789 8.34713L6.54304 13.9314C7.00536 14.3937 7.78399 14.3937 8.25847 13.9192Z" fill="white"/>
+                        </svg>
+                    </div>		
+                </div>
+           </div>
+       </div>
+
+        <footer class="footer">
+            <div class="logo footer__logo">
+                <a href="index.html">
+                    <img src="./images/logo.svg" alt="logo">	
+                </a>
+            </div>
+            <nav class="nav footer__nav">
+                <a href="#Home" class="nav__item nav__item--active">Home</a>
+                <a href="#Shop" class="nav__item">Shop</a>
+                <a href="#Account" class="nav__item">Account</a>
+                <a href="#Pages" class="nav__item">Pages</a>
+                <a href="#Blog" class="nav__item">Blog</a>
+                <a href="#Docs/Components" class="nav__item">Docs/Components</a>
+            </nav>
+            <div class="social-media footer__social-media">
+                <a class="social-media__item" href="somelink">
+                    <img class="social-media__item-icon" src=".\images\twitter.svg" alt="twitter">
+                </a>
+                <a class="social-media__item" href="somelink">
+                    <img class="social-media__item-icon" src=".\images\facebook.svg" alt="facebook">
+                </a>
+                <a class="social-media__item" href="somelink">
+                    <img class="social-media__item-icon" src=".\images\linkedin.svg" alt="linkedin">
+                </a>
+            </div>
+        </footer>
+
+
+    </main>
+
+</body>
+</html>

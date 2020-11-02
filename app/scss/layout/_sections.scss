@@ -1,0 +1,43 @@
+.banner-section {
+    width: 100%;
+    background-image: url(../images/background_main.jpeg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &-textblock {
+        padding-top: 172px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 475px;
+        &__title {
+        @include h1 ();  
+        margin: 8px 0;
+        @include screen-max ($lg) {
+            @include p (700, 38px, 47px, white);
+            margin: 6px 0;
+        }
+        }
+        &__overtitle {
+        @include h3 ();
+        @include screen-max ($lg) {
+            @include h5 ();
+        }
+        }
+        &__subtitle {
+        @include p (500, 16px, 28px, white);
+        @include screen-max ($lg) {
+            @include p (500, 16px, 28px, white);
+        }
+        }
+    }
+    &__button {
+        margin: 31px 0 134px;
+    }
+}

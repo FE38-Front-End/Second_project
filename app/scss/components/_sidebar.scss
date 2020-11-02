@@ -1,0 +1,248 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 17px;
+    border: 1px solid #E8E8E8;
+    width: 380px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-shrink: 0;
+    background-color: #FFFFFF;
+    height: fit-content;
+    &-search {
+        display: flex;
+        border: 1px solid #DCDCDC;
+        box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 7px;
+        align-items: center;
+        padding: 18px 16px 18px 23px;
+        margin-bottom: 20px;
+        &__input {
+            border: none;
+            background: none;
+            width: 100%;
+        }
+    }
+    &-categories {
+        padding: 30px 35px;
+        border-radius: 5px;
+        border: 1px solid #E8E8E8;
+    }
+    &__dropdown {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+        &-title {
+            @include h5 ();
+            display: flex;
+            align-items: center;
+            color: #252B42;
+        }
+        &-img {
+            background-color: #f1f1f1;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            // &--active {
+            //     background-color: #2091f9;
+            // }
+        }
+        &-menu {
+            display: flex;
+            padding: 12px;
+            border-bottom: 1px solid #e4e4e4; //что это вообще такое блин, почему нет нормальной границы
+            &-item {
+                @include h6 ();
+                color: #737373;
+                padding: 0 0 0 3px;
+            }
+        }
+        &-input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            & ~ .sidebar__dropdown-menu {
+                display: none;
+            }
+            &:checked ~ .sidebar__dropdown-menu {
+                display: block;
+            } 
+            &:checked + .sidebar__dropdown-title > .sidebar__dropdown-img  {
+                background-color: #2091f9
+            }
+        }
+    }
+    &-section {
+        padding: 30px 35px;
+        border-radius: 5px;
+        border: 1px solid #E8E8E8;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        &__title {
+            @include h5 ();
+            display: flex;
+            align-items: center;
+            color: #252B42;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
+    &__icon {
+        width: 25px;
+        height: 25px;
+        background: #FFFFFF;
+        border: 2px solid #DCDCDC;
+        border-radius: 5px;
+        transition: all .2s ease-out;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          border-color: #2091F9;
+        }
+        &--radio {
+            border-radius: 100px;
+        }
+    }
+    &__text {
+    @include h6 ();
+    color: #737373;
+    }
+    &__number {
+        @include h6 ();
+        color: #737373;
+        margin-left: auto;
+    }
+    &__input {
+        display: none;
+        &:checked ~ {
+            .checkbox__icon {
+            background-color: #2091F9;
+            border-color: #2091F9;
+            }
+            .checkbox__icon--radio {
+                border: 5px solid #2091f9;
+                background-color: #FFFFFF;
+            }
+            .checkbox__text {
+            color: #252B42;
+            }
+        }
+    }    
+}
+
+.price-filter {
+    display: flex;
+    height: 6px;
+    background-color: #e5e5e5;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 58px;
+    &__choise {
+        height: 6px;
+        background-color: #2dc071;
+        width: 150px;
+        align-content: center;
+        justify-content: center;
+    }
+    &__circle {
+        height: 13px;
+        width: 13px;
+        background-color: #2dc071;
+        border-radius: 50px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        &--min {
+            left: 55px;
+            top: -3px;
+        }
+        &--max {
+            right: 55px;
+            top: -3px;
+        }
+        &-decor {
+            width: 3px;
+            height: 5px;
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+    &__range {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        &-item {
+            width: 130px;
+            height: 58px;
+            border: 1px solid #E0E0E0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 21px 0 21px 15px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 16px;
+            letter-spacing: 0.1px;
+            color: #252B42;
+            display: flex;
+        }
+    }
+    &__price {
+        position: absolute;
+        padding: 0 6px;
+        background: #252B42;
+        border-radius: 2px;
+        @include h5 ();
+        &--min {
+            top: -35px;
+            left: 48px;
+            &::after {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #252B42;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 22px;
+                right: 12px;
+            }
+        }
+        &--max {
+            top: -35px;
+            right: 39px; 
+            &::after {
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: #252B42;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 22px;
+                right: 20px;
+            }
+        }
+    }
+}

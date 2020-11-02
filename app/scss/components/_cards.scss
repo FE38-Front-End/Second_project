@@ -1,0 +1,228 @@
+.card {
+    &__pic {
+        width: 242px;
+        height: 414px;
+        border-radius: 10px;
+    }
+    &__name {
+        @include p (400, 20px, 30px, black);
+        margin-top: 14px;
+    }
+    &__subtitle {
+        @include p (400, 20px, 30px, lightgray);
+    }
+    &__price {
+        @include h4 ();
+        color: #252b42;
+        margin-top: 14px;
+    }
+    &__color {
+        margin-top: 14px;
+    }
+    &__size {
+        margin-top: 14px;
+    }
+    &.vert-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 30px;
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+        @include screen-max ($xl) {
+            &:nth-child(2n+2) {
+                margin-right: 0;
+            }
+        }
+        @include screen-max ($lg) {
+            margin-right: 0;
+        }
+    }
+    &.small-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 50px;
+        &:not(:nth-child(4n+4)) {
+            margin-right: 40px;
+        }
+        @include screen-max ($xl) {
+            &:nth-child(2n+2) {
+                margin-right: 0;
+            }
+        }
+        @include screen-max ($lg) {
+            margin-right: 0;
+            width: 240px;
+            &:nth-child(1n+5) {
+                display: none;
+            }
+        }
+        .card {
+            &__pic {
+                width: 240px;
+                height: 180px;
+                border-radius: 0;
+            }
+            &__name {
+                @include h5 ();
+                color: black;
+                margin-top: 10px;
+            }
+            &__subtitle {
+                @include h5 ();
+                color: #d3d3d3;
+            }
+            &__price {
+                @include p (500, 16px, 28px, black);
+                margin-top: 10px;
+            }
+            &__color {
+                margin-top: 10px;
+            }
+            &__size {
+                margin-top: 10px;
+            }
+        }
+    }
+    &.catalog-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 50px;
+        &:not(:nth-child(4n+4)) {
+            margin-right: 40px;
+        }
+        .card {
+            &__pic {
+                width: 210px;
+                height: 180px;
+                border-radius: 0;
+            }
+            &__name {
+                @include h5 ();
+                color: black;
+                margin-top: 10px;
+            }
+            &__subtitle {
+                @include h5 ();
+                color: #d3d3d3;
+            }
+            &__price {
+                @include p (500, 16px, 28px, black);
+                margin-top: 10px;
+            }
+            &__color {
+                margin-top: 10px;
+            }
+            &__size {
+                margin-top: 10px;
+            }
+        }
+    
+        &--horizontal {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            margin-bottom: 10px;
+            height: 237px;
+            width: 955px;
+            background-color: white;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #DEDEDE;
+            padding: 20px 0 25px 23px;
+            align-items: center;
+            .full-heart {
+                top: 49px;
+                right: 43px;
+            }
+            .card {
+                &__pic {
+                    width: 294px;
+                    height: 192px;
+                    border-radius: 0;
+                    margin-right: 38px;
+                }
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__name {
+                    @include h5 ();
+                    color: black;
+                    margin-top: 0;
+                    span {
+                        color: #858585;
+                    }
+                }
+                &__price {
+                    @include p (500, 16px, 28px, black);
+                    margin-top: 11px;
+                }
+                &__color {
+                    margin-top: 26px;
+                }
+                &__size {
+                    margin-top: 17px;
+                }
+            }
+        }
+    }
+}
+
+
+.color {
+    display: flex;
+    &__item {
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        border: solid 2px white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+        &:active {
+            transform: scale(1.2);
+        }
+        &--blue {
+            background-color:#2091F9;
+        }
+        &--green {
+            background-color: #2DC071;
+        }
+        &--orange {
+            background-color:#E77C40;
+        }
+        &--black {
+            background-color:#252B42;
+        }
+    }
+}
+
+.size {
+    display: flex;
+    &__item {
+        display: flex;
+        justify-content: center;
+        width: 34px;
+        height: 29px;
+        border: solid 1px #e4e4e4;
+        &:not(:last-child) {
+            margin-right: 11px;
+        }
+        &:hover {
+            background-color: lightgray;
+            color: white;
+            transition: ease-out 0.1s;
+        }
+        &:active {
+            transform: scale(1.2);
+        }
+    }
+    @include p (700, 13px, 28px, #737373);
+}

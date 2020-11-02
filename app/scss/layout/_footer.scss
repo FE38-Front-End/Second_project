@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+    background-color: #252b42;
+    display: flex;
+    align-items: center;
+    padding: 50px 85px 50px 110px;
+    &__logo {
+        margin-top: -15px;
+    }
+    &__nav {
+        margin-left: 45px;
+        .nav__item {
+            color: lightgray;
+            &--active {
+                color: white;
+            }
+        }
+    }
+    &__social-media {
+        margin-left: auto;
+    }
+}
+
